@@ -1,0 +1,21 @@
+[plugin]
+slug        = "ggn"
+name        = "GazelleGames.net (GGn)"
+version     = "0.1.0"
+rpp_version = "1"
+license     = "MIT"
+
+[capabilities]
+search  = "ggn_net.search:Search"
+torrent = "ggn_net.torrent:Torrents"
+
+[permissions]
+network = ["gazellegames.net", "*.gazellegames.net"]
+romm_api = []
+
+[config]
+base_url = { type = "str", default = "https://gazellegames.net" }
+search_group_names = { type = "bool", default = false }
+include_external_links = { type = "bool", default = true }
+api_key = { type = "secret" }
+passkey = { type = "secret" }
