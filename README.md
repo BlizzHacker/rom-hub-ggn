@@ -14,6 +14,10 @@ Install:
     rom-hub plugin secret set ggn api_key --stdin
     rom-hub search ggn "Kobayakawa-san"
 
+This plugin requires a ROM Hub build with the RPP v1 `torrent` capability and
+brokered request-header support. Older proof-stack builds report
+`unknown capability 'torrent'` during install; upgrade the Hub source first.
+
 If passkey is not configured, the plugin calls GGn's authenticated
 request=quick_user endpoint when a native torrent is handed off.
 
